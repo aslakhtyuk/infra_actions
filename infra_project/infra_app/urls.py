@@ -1,11 +1,11 @@
-from django.urls import include, path
+from django.urls import path
 
 from . import views
 
 app_name = 'infra_app'
 
 urlpatterns = [
-    path('', include(views.index, namespace='index')),
-    path('second/', include(views.second_page, namespace='second_page')),
+    path('', views.index, name='index'),
+    path('second/', views.second_page, name='second_page'),
 
 ]
